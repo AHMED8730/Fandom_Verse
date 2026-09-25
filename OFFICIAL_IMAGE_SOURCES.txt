@@ -1,0 +1,28 @@
+FandomVerse — Official Image Source Notes
+===========================================
+
+The updated Movies / TV Shows / K-Pop / Manga cards use stable official-source thumbnails or publisher artwork where available.
+
+Verified official sources used:
+- Resident Evil (2026): Sony Pictures / Sony Pictures Entertainment — official trailer thumbnail.
+- Mayday (2026): Apple TV — official trailer thumbnail.
+- The Odyssey (2026): Universal Pictures — official trailer thumbnail.
+- Spider-Man: Brand New Day: Sony Pictures — official trailer thumbnail.
+- Toy Story 5: Disney / Pixar — official poster asset.
+- Avengers: Doomsday: Marvel Entertainment — official trailer thumbnail.
+- The Gentlemen: Season 2: Netflix — official trailer thumbnail.
+- Silo Season 3: Apple TV — official trailer thumbnail.
+- Lanterns: official trailer thumbnail.
+- Reacher Season 4: Prime Video — official trailer thumbnail.
+- Bleach: Thousand-Year Blood War: VIZ Media — official trailer thumbnail.
+- Ted Lasso Season 4: Apple TV — official trailer thumbnail.
+- BTS: HYBE LABELS — official MV thumbnail.
+- BLACKPINK: BLACKPINK Official Artist Channel — official MV thumbnail.
+- Stray Kids: JYP / official campaign video thumbnail.
+- ITZY: JYP Entertainment — official MV thumbnail.
+- LE SSERAFIM: official artist channel thumbnail.
+- ENHYPEN: official artist channel thumbnail.
+- One Piece Vol. 115: Shueisha publisher artwork.
+
+Important:
+The website references these official online assets directly. They are not copied into the ZIP as local image files. This keeps the artwork authentic and avoids fabricating "official" images.

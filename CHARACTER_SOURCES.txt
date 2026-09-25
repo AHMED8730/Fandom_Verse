@@ -1,0 +1,11 @@
+FandomVerse Popular Characters — refreshed
+
+The previous character list was replaced with 36 widely recognizable characters across anime, gaming, movies, TV, comics and manga.
+
+Each character card now:
+- Shows the character's face/art and name.
+- Opens when the card itself is clicked.
+- Opens a profile modal with the image, series, a short 3–4 line biography, traits and source.
+- Includes keyboard activation (Enter/Space) for accessibility.
+
+The refreshed list removes the previous less-recognizable entries and focuses on globally recognizable franchise characters.

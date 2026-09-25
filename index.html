@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FandomVerse — Portal for Fandom World</title>
+
+    <meta
+        name="description"
+        content="FandomVerse is a modern fandom portal for anime, gaming, movies, TV shows, K-pop, comics and manga."
+    >
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+<script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     PRELOADER
+===================================================== -->
+
+<div id="preloader">
+    <div class="loader-box">
+        <div class="loader-logo">
+            <i class="fa-solid fa-bolt"></i>
+        </div>
+
+        <h1>FANDOMVERSE</h1>
+        <p>Entering the Fandom Universe...</p>
+
+        <div class="loader-line">
+            <span></span>
+        </div>
+    </div>
+</div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="navbar">
+
+        <a href="#" class="logo" onclick="navigateTo('home'); return false;">
+            <span class="logo-mark">
+                <i class="fa-solid fa-bolt"></i>
+            </span>
+
+            <span>
+                FANDOM<br>
+                <b>VERSE</b>
+            </span>
+        </a>
+
+
+        <nav id="mainNav">
+
+            <a href="#" class="nav-link active"
+               data-page="home"
+               onclick="navigateTo('home'); return false;">
+                Home
+            </a>
+
+            <a href="#" class="nav-link"
+               data-page="explore"
+               onclick="navigateTo('explore'); return false;">
+                Explore
+            </a>
+
+            <a href="#" class="nav-link"
+               data-page="articles"
+               onclick="navigateTo('articles'); return false;">
+                Articles
+            </a>
+
+            <a href="#" class="nav-link"
+               data-page="community"
+               onclick="navigateTo('community'); return false;">
+                Community
+            </a>
+
+            <a href="#" class="nav-link"
+               data-page="events"
+               onclick="navigateTo('events'); return false;">
+                Events
+            </a>
+
+            <a href="#" class="nav-link"
+               data-page="merchandise"
+               onclick="navigateTo('merchandise'); return false;">
+                Store
+            </a>
+
+            <a href="#" class="nav-link"
+               data-page="more"
+               onclick="navigateTo('about'); return false;">
+                About Us
+            </a>
+
+        </nav>
+
+
+        <!-- SEARCH -->
+
+        <div class="top-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="globalSearchInput"
+                placeholder="Search anime, manga, movies, games..."
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <!-- NAV ACTIONS -->
+
+        <div class="nav-actions">
+
+            <button class="round-btn" onclick="showToast('No new notifications')">
+                <i class="fa-regular fa-bell"></i>
+            </button>
+
+            <button class="round-btn" onclick="openBookmarks()">
+                <i class="fa-regular fa-bookmark"></i>
+            </button>
+
+            <button class="round-btn cart-btn" onclick="openCart()">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cartCount">0</span>
+            </button>
+
+            <button class="avatar-btn" onclick="openAuth()">
+                <i class="fa-solid fa-user"></i>
+            </button>
+
+        </div>
+
+
+        <button class="mobile-menu" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HOME
+===================================================== -->
+
+<section id="homePage" class="page active">
+
+
+    <!-- TOP COMBINED HERO -->
+    <div class="hero-dashboard">
+
+
+        <!-- BIG FEATURED IMAGE -->
+
+        <div class="hero-banner">
+
+            <div class="hero-slides">
+
+                <div class="hero-slide active" style="background-image: url('https://d9s3e2ooa0od7.cloudfront.net/assets/resident-evil/4569e7e0-a5b5-4b5b-84fc-2c39ede8ac67/4569e7e0-a5b5-4b5b-84fc-2c39ede8ac67.jpg')"></div>
+
+                <div class="hero-slide" style="background-image: url('https://i.ytimg.com/vi/Ho10_4IX1jE/maxresdefault.jpg')"></div>
+
+                <div class="hero-slide" style="background-image: url('https://i.ytimg.com/vi/62bIsvRcPv0/maxresdefault.jpg')"></div>
+
+                <div class="hero-slide" style="background-image: url('https://i.ytimg.com/vi/f_bKjZeJBBI/maxresdefault.jpg')"></div>
+
+                <div class="hero-slide" style="background-image: url('https://i.ytimg.com/vi/om5Un9X720M/hqdefault.jpg')"></div>
+
+            </div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <span class="featured-label">
+                    FEATURED
+                </span>
+
+                <h1>
+                    Explore Your<br>
+                    <span>Fandom Universe</span>
+                </h1>
+
+                <p>
+                    Discover characters, stories, games, movies,
+                    events, trailers and everything your fandom loves.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button
+                        class="primary-btn"
+                        onclick="navigateTo('explore')"
+                    >
+                        <i class="fa-solid fa-compass"></i>
+                        Explore Now
+                    </button>
+
+                    <button
+                        class="secondary-btn"
+                        onclick="navigateTo('trailers')"
+                    >
+                        <i class="fa-solid fa-play"></i>
+                        Watch Trailers
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT COLUMN -->
+
+        <div class="hero-right">
+
+
+            <!-- TRENDING NOW -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        <i class="fa-solid fa-fire"></i>
+                        Trending Now
+                    </h2>
+
+                    <button onclick="navigateTo('explore')">
+                        View All
+                    </button>
+
+                </div>
+
+
+                <div class="trending-grid">
+
+                    <article class="trending-card" onclick="playTrailer('Resident Evil | Official Trailer')">
+
+                        <span class="rank">1</span>
+
+                        <img
+                            src="https://i.ytimg.com/vi/9Aiv1cqmH4w/maxresdefault.jpg"
+                            alt="Resident Evil Official Trailer"
+                        >
+
+                        <div class="trending-info">
+                            <h3>Resident Evil</h3>
+                            <span>Movies • Sep 18, 2026</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="trending-card" onclick="playTrailer('Practical Magic 2 | Official Trailer')">
+
+                        <span class="rank">2</span>
+
+                        <img
+                            src="https://i.ytimg.com/vi/Ho10_4IX1jE/maxresdefault.jpg"
+                            alt="Practical Magic 2 Official Trailer"
+                        >
+
+                        <div class="trending-info">
+                            <h3>Practical Magic 2</h3>
+                            <span>Movies • Sep 11, 2026</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="trending-card" onclick="playTrailer('Spider-Man: Brand New Day | New Trailer')">
+
+                        <span class="rank">3</span>
+
+                        <img
+                            src="https://i.ytimg.com/vi/62bIsvRcPv0/maxresdefault.jpg"
+                            alt="Spider-Man Brand New Day Official Trailer"
+                        >
+
+                        <div class="trending-info">
+                            <h3>Spider-Man: Brand New Day</h3>
+                            <span>Movies • Jul 31, 2026</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="trending-card" onclick="playTrailer('The Odyssey | Official New Trailer')">
+
+                        <span class="rank">4</span>
+
+                        <img
+                            src="https://i.ytimg.com/vi/f_bKjZeJBBI/maxresdefault.jpg"
+                            alt="The Odyssey Official New Trailer"
+                        >
+
+                        <div class="trending-info">
+                            <h3>The Odyssey</h3>
+                            <span>Movies • Jul 17, 2026</span>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <!-- UPCOMING RELEASES -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        Upcoming Releases
+                    </h2>
+
+                    <button onclick="navigateTo('events')">
+                        View All
+                    </button>
+
+                </div>
+
+
+                <div class="release-grid">
+
+                    <article class="release-card" onclick="playTrailer('Heart of the Beast | Official Trailer')">
+
+                        <img
+                            src="https://i.ytimg.com/vi/JFQcDFhNh4o/maxresdefault.jpg"
+                            alt="Heart of the Beast Official Trailer"
+                        >
+
+                        <div>
+                            <span>SEP 25</span>
+                            <h3>Heart of the Beast</h3>
+                            <small>Movies</small>
+                        </div>
+
+                    </article>
+
+
+                    <article class="release-card" onclick="playTrailer('Clayface | Official Trailer')">
+
+                        <img
+                            src="https://i.ytimg.com/vi/mo7-mJ6wKho/maxresdefault.jpg"
+                            alt="Clayface Official Trailer"
+                        >
+
+                        <div>
+                            <span>OCT 23</span>
+                            <h3>Clayface</h3>
+                            <small>Movies</small>
+                        </div>
+
+                    </article>
+
+
+                    <article class="release-card" onclick="playTrailer('Avengers: Doomsday | Official Trailer')">
+
+                        <img
+                            src="https://i.ytimg.com/vi/iFl4YeX6jmc/maxresdefault.jpg"
+                            alt="Avengers Doomsday Official Trailer"
+                        >
+
+                        <div>
+                            <span>DEC 18</span>
+                            <h3>Avengers: Doomsday</h3>
+                            <small>Movies</small>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         EXPLORE CATEGORIES
+    ================================================= -->
+
+    <div class="section-heading">
+
+        <h2>Explore Categories</h2>
+
+        <span>
+            <i class="fa-solid fa-layer-group"></i>
+            7 fandom worlds
+        </span>
+
+    </div>
+
+
+    <div id="categoryGrid" class="category-grid"></div>
+
+
+    <!-- =================================================
+         MAIN CONTENT GRID
+    ================================================= -->
+
+    <div class="main-dashboard-grid">
+
+
+        <!-- LEFT COLUMN -->
+
+        <div class="left-dashboard">
+
+
+            <!-- FEATURED ARTICLES -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        <i class="fa-regular fa-newspaper"></i>
+                        Featured Articles
+                    </h2>
+
+                    <button onclick="navigateTo('articles')">
+                        View All
+                    </button>
+
+                </div>
+
+                <div id="featuredGrid" class="article-grid"></div>
+
+            </div>
+
+
+            <!-- MEDIA HUB -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        <i class="fa-solid fa-photo-film"></i>
+                        Media Hub
+                    </h2>
+
+                    <button onclick="navigateTo('trailers')">
+                        View All
+                    </button>
+
+                </div>
+
+                <div id="mediaGrid" class="media-grid"></div>
+
+            </div>
+
+
+            <!-- MERCHANDISE -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Featured Merchandise
+                    </h2>
+
+                    <button onclick="navigateTo('merchandise')">
+                        View All
+                    </button>
+
+                </div>
+
+                <div id="merchGrid" class="merch-grid"></div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- RIGHT COLUMN -->
+
+        <div class="right-dashboard">
+
+
+            <!-- POPULAR CHARACTERS -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        <i class="fa-solid fa-user-group"></i>
+                        Popular Characters
+                    </h2>
+
+                    <button onclick="navigateTo('characters')">
+                        View All
+                    </button>
+
+                </div>
+
+                <div id="homeCharacters" class="characters-grid"></div>
+
+            </div>
+
+
+            <!-- EVENTS -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-header">
+
+                    <h2>
+                        <i class="fa-solid fa-calendar-check"></i>
+                        Event Highlights
+                    </h2>
+
+                    <button onclick="navigateTo('events')">
+                        View All
+                    </button>
+
+                </div>
+
+                <div id="homeEvents" class="events-list"></div>
+
+            </div>
+
+
+            <!-- FEATURE CARDS -->
+
+            <div class="mini-features">
+
+                <div>
+                    <i class="fa-solid fa-star"></i>
+                    <strong>Curated Content</strong>
+                    <small>Handpicked for fans</small>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-users"></i>
+                    <strong>Active Community</strong>
+                    <small>Connect with fans</small>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-robot"></i>
+                    <strong>AI Assistant</strong>
+                    <small>24/7 recommendations</small>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-bolt"></i>
+                    <strong>Stay Updated</strong>
+                    <small>Never miss a thing</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- VISITOR STATS -->
+
+    <div class="visitor-bar">
+
+        <div>
+            <i class="fa-solid fa-users"></i>
+            <span>Visitors</span>
+            <strong id="visitorCount">0</strong>
+        </div>
+
+        <div>
+            <i class="fa-regular fa-clock"></i>
+            <span>Live Time</span>
+            <strong id="clock">--:--:--</strong>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-heart"></i>
+            <span>Fandom Community</span>
+            <strong>Online</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPLORE PAGE
+===================================================== -->
+
+<section id="explorePage" class="page">
+
+    <div class="page-title">
+
+        <div>
+            <span>DISCOVER</span>
+            <h1>Explore FandomVerse</h1>
+            <p>Search and filter content across every fandom.</p>
+        </div>
+
+    </div>
+
+
+    <div class="filters">
+
+        <div class="filter-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                id="exploreSearch"
+                type="text"
+                placeholder="Search content..."
+            >
+
+        </div>
+
+
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+        </select>
+
+
+        <select id="typeFilter">
+            <option value="all">All Types</option>
+            <option value="article">Articles</option>
+            <option value="gallery">Galleries</option>
+            <option value="video">Videos</option>
+            <option value="audio">Audio</option>
+        </select>
+
+
+        <select id="sortFilter">
+            <option value="featured">Featured</option>
+            <option value="newest">Newest</option>
+            <option value="alphabetical">A-Z</option>
+            <option value="popular">Popularity</option>
+        </select>
+
+    </div>
+
+
+    <div id="exploreGrid" class="large-content-grid"></div>
+
+</section>
+
+
+<!-- =====================================================
+     ARTICLES PAGE
+===================================================== -->
+
+<section id="articlesPage" class="page">
+
+    <div class="page-title">
+        <span>STORIES</span>
+        <h1>Featured Articles</h1>
+        <p>Deep dives, fandom news and interesting stories.</p>
+    </div>
+
+    <div id="articlesGrid" class="large-content-grid"></div>
+
+</section>
+
+
+<!-- =====================================================
+     CHARACTERS PAGE
+===================================================== -->
+
+<section id="charactersPage" class="page">
+
+    <div class="page-title">
+        <span>CHARACTER DATABASE</span>
+        <h1>Popular Characters</h1>
+        <p>Explore characters from different fandom worlds.</p>
+    </div>
+
+    <div class="filters">
+
+        <select id="characterCategoryFilter">
+            <option value="all">All Categories</option>
+        </select>
+
+        <input
+            id="characterSearch"
+            type="text"
+            placeholder="Search character..."
+        >
+
+    </div>
+
+    <div id="charactersGrid" class="character-database"></div>
+
+</section>
+
+
+<!-- =====================================================
+     EVENTS PAGE
+===================================================== -->
+
+<section id="eventsPage" class="page">
+
+    <div class="page-title">
+        <span>COMMUNITY</span>
+        <h1>Event Highlights</h1>
+        <p>Discover upcoming and past fandom events.</p>
+    </div>
+
+    <div class="filters">
+
+        <select id="eventCategoryFilter">
+            <option value="all">All Categories</option>
+        </select>
+
+        <select id="eventStatusFilter">
+            <option value="all">All Events</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="past">Past</option>
+        </select>
+
+    </div>
+
+    <div id="eventsGrid" class="events-database"></div>
+
+</section>
+
+
+<!-- =====================================================
+     TRAILERS PAGE
+===================================================== -->
+
+<section id="trailersPage" class="page">
+
+    <div class="page-title">
+        <span>MEDIA</span>
+        <h1>Upcoming Movie Trailers</h1>
+        <p>Watch official trailers for upcoming and latest movies from their studio and distributor channels.</p>
+    </div>
+
+    <div class="filters">
+
+        <select id="trailerCategoryFilter">
+            <option value="all">All Categories</option>
+        </select>
+
+        <select id="trailerStatusFilter">
+            <option value="all">All Releases</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="released">Released</option>
+        </select>
+
+    </div>
+
+    <div id="trailersGrid" class="trailer-grid"></div>
+
+</section>
+
+
+<!-- =====================================================
+     MERCHANDISE PAGE
+===================================================== -->
+
+<section id="merchandisePage" class="page">
+
+    <div class="page-title">
+        <span>FANDOM STORE</span>
+        <h1>Featured Merchandise</h1>
+        <p>Explore fandom merchandise, add multiple items to your cart, and see the combined total in Rs.</p>
+    </div>
+
+    <div id="fullMerchGrid" class="store-grid"></div>
+
+</section>
+
+
+<!-- =====================================================
+     BOOKMARKS PAGE
+===================================================== -->
+
+<section id="bookmarksPage" class="page">
+
+    <div class="page-title">
+
+        <span>YOUR COLLECTION</span>
+
+        <h1>Bookmarks</h1>
+
+        <p>
+            Your saved fandom content is stored locally in your browser.
+        </p>
+
+        <button
+            class="primary-btn"
+            onclick="exportBookmarks()"
+        >
+            <i class="fa-solid fa-download"></i>
+            Export Bookmarks
+        </button>
+
+    </div>
+
+    <div id="bookmarksGrid" class="large-content-grid"></div>
+
+</section>
+
+
+<!-- =====================================================
+     COMMUNITY PAGE
+===================================================== -->
+
+<section id="communityPage" class="page">
+
+    <div class="page-title">
+        <span>COMMUNITY</span>
+        <h1>Fandom Community</h1>
+        <p>Discover, share and connect with other fandom lovers.</p>
+    </div>
+
+    <div class="community-grid">
+
+        <div class="community-card">
+            <i class="fa-solid fa-comments"></i>
+            <h2>Discussion Zone</h2>
+            <p>
+                Explore fandom topics and discover conversations
+                around your favorite worlds.
+            </p>
+        </div>
+
+        <div class="community-card">
+            <i class="fa-solid fa-calendar-star"></i>
+            <h2>Fandom Events</h2>
+            <p>
+                Keep track of conventions, community meetups
+                and special events.
+            </p>
+        </div>
+
+        <div class="community-card">
+            <i class="fa-solid fa-heart"></i>
+            <h2>Favorite Content</h2>
+            <p>
+                Save articles, characters, events and media
+                using the bookmark feature.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT PAGE
+===================================================== -->
+
+<section id="aboutPage" class="page">
+
+    <div class="page-title">
+        <span>FANDOMVERSE</span>
+        <h1>About Us</h1>
+    </div>
+
+    <div class="info-page">
+
+        <h2>Welcome to FandomVerse</h2>
+
+        <p>
+            FandomVerse is a fan-focused digital portal created to
+            bring different fandom worlds together in one modern
+            and interactive platform.
+        </p>
+
+        <p>
+            Explore anime, gaming, movies, TV shows, K-pop,
+            comics and manga through articles, characters,
+            events, trailers and merchandise.
+        </p>
+
+        <h2>Our Mission</h2>
+
+        <p>
+            Our goal is to make fandom discovery simple,
+            visual, interactive and enjoyable.
+        </p>
+
+        <h2>What You'll Find Here</h2>
+
+        <p>
+            FandomVerse brings together character profiles, trending
+            and upcoming release trackers, community discussions,
+            fan events, curated articles and a merchandise store —
+            all in one place, so you don't have to jump between a
+            dozen different sites to keep up with your favorite
+            universes.
+        </p>
+
+        <h2>Who It's For</h2>
+
+        <p>
+            Whether you're a casual viewer or a deep-dive completionist,
+            FandomVerse is built for fans who want a single home base
+            to track releases, discover new series, connect with other
+            fans and shop for merch tied to the stories they love.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT PAGE
+===================================================== -->
+
+<section id="contactPage" class="page">
+
+    <div class="page-title">
+        <span>GET IN TOUCH</span>
+        <h1>Contact Us</h1>
+        <p>Have feedback or suggestions? Let us know.</p>
+    </div>
+
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <h3>Email</h3>
+
+            <p>
+                hello@fandomverse.example
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <h3>Location</h3>
+
+            <p>
+                FandomVerse Community Hub
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>Support</h3>
+
+            <p>
+                Available 24/7
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="contact-form">
+
+        <input
+            id="contactName"
+            placeholder="Your Name"
+        >
+
+        <input
+            id="contactEmail"
+            type="email"
+            placeholder="Your Email"
+        >
+
+        <textarea
+            id="contactMessage"
+            placeholder="Your Message"
+        ></textarea>
+
+        <button
+            class="primary-btn"
+            onclick="sendContactMessage()"
+        >
+            Send Message
+        </button>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+            <strong>FANDOMVERSE</strong>
+            <p>
+                Portal for the Fandom World
+            </p>
+        </div>
+
+        <div>
+            <p>
+                © 2026 FandomVerse. Built for fandom lovers.
+            </p>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     CHATBOT
+===================================================== -->
+
+<div class="chatbot">
+
+    <div id="chatWindow" class="chat-window">
+
+        <div class="chat-header">
+
+            <div>
+                <strong>FandomVerse Assistant</strong>
+                <small>Online • Rule-based assistant</small>
+            </div>
+
+            <button onclick="toggleChat()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div id="chatMessages" class="chat-messages">
+
+            <div class="bot-message">
+                👋 Hey! Welcome to FandomVerse.
+                What fandom are you interested in?
+            </div>
+
+            <div class="quick-replies">
+
+                <button onclick="quickChat('anime')">
+                    Anime
+                </button>
+
+                <button onclick="quickChat('gaming')">
+                    Gaming
+                </button>
+
+                <button onclick="quickChat('movies')">
+                    Movies
+                </button>
+
+                <button onclick="quickChat('events')">
+                    Events
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="chat-input">
+
+            <input
+                id="chatInput"
+                type="text"
+                placeholder="Type a message..."
+                onkeydown="handleChatKey(event)"
+            >
+
+            <button onclick="sendChat()">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="chat-toggle"
+        onclick="toggleChat()"
+        title="FandomVerse Assistant"
+    >
+        <i class="fa-solid fa-robot"></i>
+    </button>
+
+</div>
+
+
+<!-- =====================================================
+     MODAL
+===================================================== -->
+
+<div id="modal" class="modal">
+
+    <div class="modal-box">
+
+        <button
+            class="modal-close"
+            onclick="closeModal()"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div id="modalContent"></div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div id="toast" class="toast"></div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="./app.js"></script>
+
+</body>
+</html>

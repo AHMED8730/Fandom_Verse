@@ -1,0 +1,7 @@
+Image update rules
+
+1. No movie-scene screenshots or group shots.
+2. Each character card uses one character only.
+3. Portraits are displayed as close head-and-neck crops using object-fit: cover.
+4. The face is positioned near the upper center so the portrait reads as a character profile.
+5. Clicking the card opens the same single-character profile with image and 3–4 line details.

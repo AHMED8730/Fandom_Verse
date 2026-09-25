@@ -1,0 +1,7 @@
+FandomVerse image corrections
+
+Movie/TV/K-pop images were replaced with title-specific official trailer thumbnails or genuine promotional/key-art URLs where available. The duplicate artwork issue was caused by multiple cards pointing to the same/failing image sources.
+
+Verified official-source references used during the correction include Sony Pictures Resident Evil, Apple TV Mayday/Silo/Ted Lasso, Marvel Avengers: Doomsday, Sony Spider-Man: Brand New Day, Universal The Odyssey, Disney/Pixar Toy Story 5, Star Wars The Mandalorian and Grogu, Capcom Street Fighter, YG BLACKPINK, HYBE/BIGHIT BTS, and official artist YouTube sources.
+
+Manga: ONE PIECE 115 cover is served from the Shueisha-hosted image asset associated with ISBN 978-4-08-885130-3.
